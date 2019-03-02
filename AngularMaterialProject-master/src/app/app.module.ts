@@ -16,6 +16,7 @@ import { RegularTableComponent } from './regular-table/regular-table.component';
 import { CustomTableComponent } from './custom-table/custom-table.component';
 import { CustomDialogComponent } from './custom-dialog/custom-dialog.component';
 import { RestServiceService } from './rest-service.service';
+import { CdkVirtualScrollDataSourceExampleComponent } from './cdk-virtual-scroll-data-source-example/cdk-virtual-scroll-data-source-example.component';
 
 // const appRoutes: Routes = [
 //   { path: 'first-page', component: FirstComponentComponent },
@@ -30,7 +31,8 @@ import { RestServiceService } from './rest-service.service';
     FirstComponentComponent,
     RegularTableComponent,
     CustomTableComponent,
-    CustomDialogComponent
+    CustomDialogComponent,
+    CdkVirtualScrollDataSourceExampleComponent
   ],
   imports: [
     BrowserModule,

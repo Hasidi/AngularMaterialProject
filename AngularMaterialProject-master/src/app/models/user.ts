@@ -5,7 +5,13 @@ export interface IUser {
     Age: number;
 }
 
-export const usersMockData: IUser[] = [
+export class User implements IUser {
+    Id: number;    FirstName: string;
+    LastName: string;
+    Age: number;
+}
+
+export const usersMockData: any[] = [
     {Id: 1, FirstName: 'EladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladEladElad', LastName: 'Assis', Age: 32},
     {Id: 1, FirstName: 'Elad', LastName: 'Assis', Age: 32},
     {Id: 2, FirstName: 'Nethaniel', LastName: 'Hasidi', Age: 30},
@@ -26,7 +32,15 @@ export const usersMockData: IUser[] = [
 export const productsMockData: any[] = [
     {ProductId: 1, Type: 'Laptop', Brand: 'Lenovo', Item: 'Yoga 730', Size: '15 inch',
      CPU: 'i7-8565U Quad Core Processor', RAM: '16GB', HardDrive: '512 pcie ssd',
-      GPU: 'NVIDIA® GeForce GTX 1050 4GB GDDR5', Weight: '1.89 kg', Battery: '3-Cell/51.5WH', OS: 'Windows 10 Home Edition'},
+      GPU: 'NVIDIA® GeForce GTX 1050 4GB GDDR5', Weight: '1.89 kg', Battery: '3-Cell/51.5WH',
+      OS: 'Windows 10 Home Edition', Color: 'Gray', Price: '5500 Shekel', AAAA: 'aaaa',
+    BBB: 'bbbbb', CCC: 'ccccc', DDD: 'dddd'},
     {ProductId: 2, Type: 'Phone', Item: 'Samsung Galaxy Note 9'},
     {ProductId: 3, Type: 'Laptop', Item: 'Asus Zenbook Pro UX550'},
 ];
+
+export interface IProduct {
+    ProductId: number;
+    Type: string;
+    name: string;
+}

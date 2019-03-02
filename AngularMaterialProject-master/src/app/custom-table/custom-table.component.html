@@ -29,16 +29,16 @@
                 <ng-container class="my-ng-container-data" *ngFor="let disCol of displayedColumns.slice(0,-1);
                             let colIndex = index" matColumnDef="{{disCol}}"
                             >
-                        <mat-header-cell *matHeaderCellDef mat-sort-header>
+                        <mat-header-cell class="main-mat-header-cell" *matHeaderCellDef mat-sort-header>
     
                             {{disCol}}
     
                         </mat-header-cell>
-                        <mat-cell *matCellDef="let row" >
+                        <mat-cell class="main-mat-cell" *matCellDef="let row" >
                                 <!-- <span style="overflow:hidden;margin:0px 10px 0px 0px; "> -->
                                 <span>
                                         <span [ngClass]="'my-mat-cell'">
-                                            <input matInput [attr.disabled]="true" value="{{row[disCol]}}">
+                                            <input readonly matInput [attr.disabled]="true" value="{{row[disCol]}}">
                                             <!-- <textarea readonly class="mat-cell-textarea">{{row[disCol]}}</textarea>     -->
                                         </span>
                                 </span>
@@ -46,7 +46,7 @@
                         </mat-cell>
                 </ng-container>
     
-                <ng-container matColumnDef="actions" style="flex: 0 0 25% !important;">
+                <ng-container class="action-col" matColumnDef="actions">
                         <mat-header-cell *matHeaderCellDef></mat-header-cell> 
                         <mat-cell *matCellDef="let row; let i=index">
                             <button mat-icon-button color="accent" (click)=openDialog(i)>
