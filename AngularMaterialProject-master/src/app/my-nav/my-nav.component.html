@@ -1,0 +1,115 @@
+<div>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+        <mat-icon style="width:26px; height:26px;">build</mat-icon>
+        <span style="margin-left: 30px; font-size: 26px;">Angular Material App</span>
+
+    <mat-nav-list class="toolbar-nav-list">
+        <!--<span style="margin-left:20px;">-->
+            <!--<mat-icon style="position: relative" >web_asset</mat-icon>-->
+            <!--<mat-label class="toolbar-mat-label" style="position: relative">CI Portal</mat-label>-->
+        <!--</span>-->
+      <span class="row align-items-center">
+        <mat-icon>web_asset</mat-icon>
+        <mat-label class="toolbar-mat-label">Library</mat-label>
+      </span>
+      <span class="row align-items-center">
+        <mat-icon>mail_outline</mat-icon>
+        <mat-label class="toolbar-mat-label">Contact</mat-label>
+      </span>
+      <span class="row align-items-center">
+        <mat-icon svgIcon="icon_vs">icon_vs</mat-icon>
+        <mat-label class="toolbar-mat-label">VS</mat-label>
+      </span>
+
+        <!--<span style="margin-left:20px;">-->
+            <!--<mat-icon inline="true">mail_outline</mat-icon>-->
+            <!--<mat-label class="toolbar-mat-label">Contact</mat-label>-->
+        <!--</span>-->
+        <!--<span style="margin-left:20px;">-->
+            <!--<mat-icon inline="true" svgIcon="icon_vs" style="width:23px;height:23px">icon_vs</mat-icon>-->
+            <!--<mat-label class="toolbar-mat-label">TFS</mat-label>-->
+        <!--</span>-->
+    </mat-nav-list>
+    <!-- <span style="margin-left:700px;">
+        <mat-icon inline="true" color="blue">bug_report</mat-icon>
+        <mat-label class="toolbar-mat-label">CI Portal</mat-label>
+    </span>
+    <span style="margin-left:20px;">
+        <mat-icon inline="true" color="blue">mail_outline</mat-icon>
+        <mat-label class="toolbar-mat-label">Contact</mat-label>
+    </span>
+    <span style="margin-left:20px;">
+        <mat-icon inline="true" color="blue">bug_report</mat-icon>
+        <mat-label class="toolbar-mat-label">CI Portal</mat-label>
+    </span> -->
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container #drawer class="mat-elevation-z12" [ngClass]="'my-mat-sidenav-container'">
+  <mat-sidenav #drawer class="custom-sidenav" opened mode="side">
+    <mat-nav-list class="custom-nav-list">
+      <span class="fatures"><label>FEATURES</label><label></label></span >
+      <mat-divider></mat-divider>
+      <mat-list-item >
+          <mat-icon>launch</mat-icon>
+          <a class="nav-list-item" (click)="renderData1()">Users</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+          <mat-icon>launch</mat-icon>
+          <a class="nav-list-item" (click)="renderData2()">Products</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+          <mat-icon>launch</mat-icon>
+          <a class="nav-list-item" (click)="renderData2()">Products</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+          <mat-icon >launch</mat-icon>
+          <a class="nav-list-item" (click)="renderData2()">Products</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+          <mat-icon>launch</mat-icon>
+          <a class="nav-list-item" (click)="renderData2()">Products</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+          <mat-icon>launch</mat-icon>
+          <a class="nav-list-item" (click)="renderData2()">Products</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+          <mat-icon>launch</mat-icon>
+          <a class="nav-list-item" (click)="renderData2()">Products</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+          <mat-icon>launch</mat-icon>
+          <a class="nav-list-item" (click)="renderData2()">Products</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+          <mat-icon>launch</mat-icon>
+          <a class="nav-list-item" (click)="renderData2()">Products</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+          <!-- <router-outlet></router-outlet> -->
+    <!-- <div class="main-content">
+      <app-custom-table [data]="dataToPass" [inputName]="inputName"></app-custom-table>
+    </div>    -->
+    <div class="main-content">
+        <mat-card>
+            <app-custom-table [data]="dataToPass" [inputName]="inputName"></app-custom-table>
+        </mat-card>
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+</div>

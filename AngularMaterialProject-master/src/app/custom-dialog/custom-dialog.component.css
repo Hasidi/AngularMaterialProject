@@ -1,0 +1,7 @@
+.mat-dialog-content {
+    flex-direction: column;
+    display: flex;
+    resize: both;
+    /* align-self: center;  */
+}
+

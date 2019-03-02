@@ -1,0 +1,28 @@
+<h1 mat-dialog-title class="primary">{{title}} {{dialogRef.id}}</h1>
+
+<div mat-dialog-content>
+        <mat-form-field color="accent" *ngFor="let fieldProperty of fieldsProperties; let propIndex = index">
+                <mat-label>{{fieldProperty}}:</mat-label>
+                <textarea matInput 
+                            class="form-control"
+                            cdkTextareaAutosize
+                            #autosize="cdkTextareaAutosize"
+                            cdkAutosizeMinRows="1"
+                            cdkAutosizeMaxRows="10"
+                            [(ngModel)]="data.data[fieldProperty]"></textarea>
+        </mat-form-field>
+        <!-- <mat-form-field class="input-field col s6" *ngFor="let fieldProperty of fieldsProperties; let propIndex = index">
+            <span>
+                {{fieldProperty}}:
+                
+                    <input matInput [(ngModel)]="data[fieldProperty]">
+          
+             </span>
+        </mat-form-field> -->
+</div>
+
+<br>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Save</button>
+</div>
